@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+
+
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+          <a class = "logo" href="../index.html"> timetable</a>
+          <img id="mobile-nav-open" class="mobile-menu-open" src="../assets/mobile-nav-open.svg"
+          alt="Drop down to open navigation">
+    
+          <nav>
+            <img id="mobile-nav-exit" class="mobile-menu-exit" src="../assets/mobile-nav-exit.svg"
+            alt="Icon to close navigation">
+            <h2 class="nav-logo">timetable</h2>
+            <div class="divider"></div>
+            
+            <ul class = "nav-container">
+              <li> <a  href="../index.html">
+                Home</a></li>
+              <li><a href="../how-it-works/how-it-works.html">
+                How it works</a></li>
+              <li><a href="../about-us/about-us.html">
+                About us</a></li>   
+              <span><li class = "contact"><a class= current href="../contact/contact.html">
+                Contact</a></li></span>          
+            </ul>
+    
+            <div class="nav-contacts">
+              <a href="https://www.instagram.com/trytimetable/"><img src="../assets/insta-icon.svg" alt= "timetable Instagram" class="insta-icon"></a>
+              <a href="https://www.instagram.com/trytimetable/"><img src="../assets/fb-icon.svg" alt= "timetable Facebook" class="fb-icon"></a>
+              <a href="html/contact.html"><img src="../assets/mail-icon.svg" alt= "timetable email" class="mail-icon"></a>
+            </div>
+    
+            <!-- <a href="" class="nav-cta">Add to chrome</a> -->
+          </nav>
+    </section>
+    
+    <section class="main">
+   <!-- <iframe src="https://us18.list-manage.com/contact-form?u=4f53b16e5d70a11a0b3fdb87f&form_id=1765d01c6708701bfc2d53c885140471" frameborder="0" width="1000px" height="5000px"></iframe> -->
+   <h1 class="title">Contact our team</h1> 
+   <h2 class="subtext">Feel free to reachout with any question, concerns, or suggestions!</h2>
+
+    <form action="https://formsubmit.co/0375aed2e9cc1b06e9f05b6cb0bcf648" method="POST">
+      <!-- <input type="hidden" name="_captcha" value="false"> -->
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_subject" value="New submission from website">  
+      <label for="name">Name <span>*</span></label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">Email <span>*</span></label>
+        <input type="email" name="email" id="email" required>
+        <label for="email"> Your Message <span>*</span></label>
+        <textarea name="message" id="msg" ></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    </section>
+
+    <div id = "blackout" class="black-cover"></div>
+
+
+
+      <script>
+          let mobileBtn = document.getElementById('mobile-nav-open')
+                nav = document.querySelector('nav')
+                mobileBtnExit = document.getElementById('mobile-nav-exit');
+                cover = document.getElementById("blackout")
+          mobileBtn.addEventListener('click', function(){
+              nav.classList.add("enable")
+              setTimeout(function(){nav.style.transform = "translate(0px)" }, 1);
+              cover.classList.add("cover-enable") 
+          })
+  
+          mobileBtnExit.addEventListener('click', function(){
+              nav.style.transform = "translate(100vw)"
+              setTimeout(function(){nav.classList.remove("enable")}, 500);
+              cover.classList.remove("cover-enable") 
+          })
+      </script>
+</body>
+</html>

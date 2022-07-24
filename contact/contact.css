@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Work+Sans:wght@400;500;600;700&display=swap");
+:root {
+  --primary: #B9CFE3;
+  --accent: #418084;
+}
+
+html, body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0;
+  overflow: hidden;
+}
+
+ul {
+  color: black;
+  list-style-type: none;
+}
+
+.cover {
+  display: none;
+}
+
+.cover-enable {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.navbar {
+  padding: 24px;
+  margin: 0;
+}
+.navbar .logo {
+  font-family: "Work Sans", sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+.navbar .mobile-menu-open {
+  float: right;
+  padding-top: 6px;
+  cursor: pointer;
+  width: 23px;
+  height: 16px;
+}
+.navbar nav {
+  transform: translate(100vw);
+  display: none;
+}
+.navbar nav.enable {
+  display: block;
+}
+.navbar nav {
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  transition: 0.5s;
+  background-color: white;
+  padding: 21px 24px 54px 27px;
+  border-radius: 0.7em 0 0 0.7em;
+  z-index: 9999;
+}
+.navbar .nav-logo {
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.navbar .divider {
+  border-bottom: 1px solid #7BB9B0;
+  padding-top: 28px;
+}
+.navbar .nav-container {
+  padding: 0;
+}
+.navbar ul {
+  margin-top: 24px;
+}
+.navbar li {
+  margin-bottom: 24px;
+}
+.navbar li a {
+  font-family: "Inter", sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  padding-left: 2px;
+  padding-bottom: 6px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.navbar li a:hover {
+  border-bottom: solid #006C66 2px;
+}
+.navbar li .current {
+  font-weight: 700;
+}
+.navbar .nav-contacts {
+  position: absolute;
+  bottom: 54px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.navbar .nav-contacts .fb-icon, .navbar .nav-contacts .mail-icon {
+  padding-left: 13.18px;
+}
+.navbar .nav-cta {
+  padding: 13px 44px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #418084;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  bottom: 104px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.mobile-menu-exit {
+  float: right;
+  cursor: pointer;
+  margin-top: 7px;
+}
+
+.main {
+  padding: 65px 24px 65px 24px;
+}
+.main .title {
+  box-sizing: border-box;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: #2D2D2D;
+  margin: 0 0 12px 0;
+}
+.main .subtext {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  text-align: center;
+  color: #2D2D2D;
+}
+.main form {
+  box-sizing: border-box;
+  position: relative;
+  padding: 24px 20px 40px 20px;
+  height: max(45vh, 70vw);
+  max-height: 62vh;
+  width: 88vw;
+  display: block;
+  margin: 46px auto 0;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.main form label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  display: block;
+}
+.main form label span {
+  color: #FA3F3F;
+}
+.main form input {
+  box-sizing: border-box;
+  border: 1px solid #AEAEAE;
+  border-radius: 4px;
+  width: 100%;
+  height: 33px;
+  margin: 8px 0 16px 0;
+  padding-left: 7px;
+}
+.main form #msg {
+  box-sizing: border-box;
+  resize: none;
+  border: 1px solid #AEAEAE;
+  padding: 5px 0 0 5px;
+  margin: 8px 0 18px 0;
+  width: 100%;
+  height: 34%;
+}
+.main form button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  margin: 0 20px 40px 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 200%;
+  color: #FFFFFF;
+  background-color: #ED1F1F;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.main form button:active {
+  background-color: #b11919;
+}
+
+@media only screen and (min-width: 840px) {
+  .mobile-menu-exit, .mobile-menu-open, .black-cover, .nav-logo, .nav-contacts, .divider {
+    display: none;
+  }
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar nav {
+    display: flex;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    justify-content: flex-end;
+    margin: 0;
+    transform: translate(0px);
+  }
+  .navbar nav ul {
+    display: flex;
+    margin: auto 0;
+    padding: 0;
+  }
+  .navbar nav ul span {
+    margin-left: 0em;
+  }
+  .navbar nav ul li {
+    transition-duration: 0.4s;
+    transition-property: -webkit-text-decoration;
+    transition-property: text-decoration;
+    transition-property: text-decoration, -webkit-text-decoration;
+    margin: 0;
+  }
+  .navbar nav ul li .current {
+    font-weight: bold;
+  }
+  .navbar nav ul li:hover {
+    font-weight: normal;
+  }
+  .navbar nav ul li a {
+    padding: 0 0 0 0;
+    margin-left: 70px;
+    color: black;
+    text-decoration: none;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .main {
+    padding-top: 10px;
+  }
+  .main .title {
+    margin: 0 auto;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 200%;
+    color: #2D2D2D;
+  }
+  .main .subtext {
+    margin: -20px auto 24px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 200%;
+    color: #2D2D2D;
+  }
+  .main form {
+    padding: 48px 110px 40px 48px;
+    margin: 0 auto;
+    width: 79vw;
+    height: 64vh;
+    max-height: initial;
+  }
+  .main form label {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 200%;
+  }
+  .main form input {
+    height: 72px;
+    height: 6vh;
+    margin: 6px 0 18px 0;
+  }
+  .main form #msg {
+    height: 23%;
+  }
+  .main form button {
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 200%;
+    margin: 0 110px 20px 0;
+    padding: 12px 48px;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .navbar {
+    padding-right: 129px;
+    padding-left: 90px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  .navbar .logo {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+  }
+  .navbar .nav-container {
+    align-items: center;
+  }
+  .main {
+    padding-top: 10px;
+  }
+  .main .title {
+    margin: -20px auto 0;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 200%;
+    color: #2D2D2D;
+  }
+  .main .subtext {
+    margin: -20px auto 24px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 200%;
+    color: #2D2D2D;
+  }
+  .main form {
+    padding: 48px 110px 40px 48px;
+    margin: 0 auto;
+    width: 69vw;
+    height: 64vh;
+    max-height: initial;
+  }
+  .main form label {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 200%;
+  }
+  .main form input {
+    height: 72px;
+    height: 6vh;
+    margin: 6px 0 18px 0;
+    font-size: 24px;
+    font-family: "Inter", sans-serif;
+  }
+  .main form #msg {
+    height: 23%;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+  }
+  .main form button {
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 200%;
+    margin: 0 110px 25px 0;
+    padding: 12px 48px;
+  }
+}/*# sourceMappingURL=contact.css.map */

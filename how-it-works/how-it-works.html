@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works</title>
+    <link rel="stylesheet" href="how-it-works.css">
+
+
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+          <a class = "logo" href="../index.html"> timetable</a>
+          <img id="mobile-nav-open" class="mobile-menu-open" src="../assets/mobile-nav-open.svg"
+          alt="Drop down to open navigation">
+    
+          <nav>
+            <img id="mobile-nav-exit" class="mobile-menu-exit" src="../assets/mobile-nav-exit.svg"
+            alt="Icon to close navigation">
+            <h2 class="nav-logo">timetable</h2>
+            <div class="divider"></div>
+            
+            <ul class = "nav-container">
+              <li> <a href="../index.html">
+                Home</a></li>
+              <li><a class= current href="../how-it-works/how-it-works.html">
+                How it works</a></li>
+              <li><a href="../about-us/about-us.html">
+                About us</a></li>   
+              <span><li class = "contact"><a href="../contact/contact.html">
+                Contact</a></li></span>          
+            </ul>
+    
+            <div class="nav-contacts">
+              <a href="https://www.instagram.com/trytimetable/"><img src="../assets/insta-icon.svg" alt= "timetable Instagram" class="insta-icon"></a>
+              <a href="https://www.instagram.com/trytimetable/"><img src="../assets/fb-icon.svg" alt= "timetable Facebook" class="fb-icon"></a>
+              <a href="html/contact.html"><img src="../assets/mail-icon.svg" alt= "timetable email" class="mail-icon"></a>
+            </div>
+    
+            <!-- <a href="" class="nav-cta">Add to chrome</a> -->
+          </nav>
+    </section>
+    
+    <section class="main">
+        <h1 class="heading">How it works</h1>
+        <!-- Demo Video -->
+        <iframe  src="https://www.youtube.com/embed/ScMzIvxBSi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="subtext-1"> 
+          <p class="title">Welcome to timetable!</p>  
+          <p class="line-2">Want an easier way to create your schedule?</p>
+          <p class="line-3">  Access the extension through the chrome webstore.</p>  
+          <!-- <p class="end">Download and start today!</p> -->
+          <p class="end">We're almost ready to launch! Be the first to know</p>
+        </div>
+        <!-- Begin Mailchimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
+
+        <div id="mc_embed_signup">
+          <form action="https://gmail.us18.list-manage.com/subscribe/post?u=4f53b16e5d70a11a0b3fdb87f&amp;id=2353dcb697" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div class="mc-field-group">
+                  <!-- <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label> -->
+                  <div class="subcont">
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                  </div>
+
+                <div id="mce-responses" class="clear foot">
+                  <div class="response" id="mce-error-response" style="display:none"> </div>
+                  <div class="response" id="mce-success-response" style="display:none;margin:0; padding:0;" ></div>
+                </div>    
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4f53b16e5d70a11a0b3fdb87f_2353dcb697" tabindex="-1" value=""></div>
+                  
+                  </dv>
+              </div>
+          </form>
+        </div>
+        <!-- <a href="" class="cta-btn">Add to Chrome</a> -->
+
+        <div class="head2-section">
+          <div class="head2-cont">
+            <h1 class="heading" id="heading-2">Start Building!</h1>
+            <div class="txt-cont"><p class="para-txt">Press the extention and select the classes you would like to add to your schedule. 
+
+              It’s as easy as that!</p></div>
+          </div>
+          <img src="../assets/how-it-works-img1.png" alt="" class="heading-2-img">
+        </div>
+        <!-- <h2 class="cta-txt">Lets get started! <span>(It's free)</span></h2>
+        <a href="" class="cta-btn" id="cta-bottom">Add to Chrome</a> -->
+
+    </section>
+
+      <div id = "blackout" class="black-cover"></div>
+
+
+
+      <script>
+          let mobileBtn = document.getElementById('mobile-nav-open')
+                nav = document.querySelector('nav')
+                mobileBtnExit = document.getElementById('mobile-nav-exit');
+                cover = document.getElementById("blackout")
+          mobileBtn.addEventListener('click', function(){
+              nav.classList.add("enable")
+              setTimeout(function(){nav.style.transform = "translate(0px)" }, 1);
+              cover.classList.add("cover-enable") 
+          })
+  
+          mobileBtnExit.addEventListener('click', function(){
+              nav.style.transform = "translate(100vw)"
+              setTimeout(function(){nav.classList.remove("enable")}, 500);
+              cover.classList.remove("cover-enable") 
+          })
+      </script>
+</body>
+</html>
