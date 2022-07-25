@@ -285,7 +285,9 @@ ul{
                 padding: 0 10px ;
                 margin-top: -.35px;
                 width: fit-content;
-                border-radius: 0 .5em .5em 0;
+                border-radius: 0px;
+                border-top-right-radius: .5em;
+                border-bottom-right-radius: .5em; 
             }
         }
         }
