@@ -244,7 +244,9 @@ ul {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 0 0.5em 0.5em 0;
+  border-radius: 0px;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
 }
 .main #mc_embed_signup form {
   padding: 0;
@@ -370,8 +372,8 @@ ul {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 800;
-    font-size: 3.3vw;
-    line-height: clamp(70px, 8.2vh, 7vh);
+    font-size: 3.3vmax;
+    line-height: 120%;
     letter-spacing: -0.02em;
     max-width: 30vw;
     height: -webkit-fit-content;
@@ -457,7 +459,9 @@ ul {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
