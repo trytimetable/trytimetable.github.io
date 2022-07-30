@@ -248,6 +248,9 @@ ul {
   border: none;
   font-family: "Inter", sans-serif;
   font-size: 14px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .main #mc_embed_signup form {
   padding: 0;
