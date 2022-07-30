@@ -279,9 +279,10 @@ ul {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 0px;
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
+  border-radius: 0em 0.5em 0.5em 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .main #mc_embed_signup form {
   padding: 0;
