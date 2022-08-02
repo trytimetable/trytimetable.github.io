@@ -58,7 +58,7 @@
         <input type="email" name="email" id="email" required>
         <label for="email"> Your Message <span>*</span></label>
         <textarea name="message" id="msg" ></textarea>
-        <div class="button-cont-before"><button type="submit">Submit</button></div>
+        <div class="button-cont-after"><p id="confirmation">Your message has been succesfully submited!</p><button type="submit">Submit</button></div>
     </form>
 
     </section>
@@ -72,7 +72,8 @@
               nav = document.querySelector('nav')
               mobileBtnExit = document.getElementById('mobile-nav-exit');
               cover = document.getElementById("blackout")
-             
+       
+
           mobileBtn.addEventListener('click', function(){
           nav.classList.add("enable")
           setTimeout(function(){nav.style.transform = "translate(0px)" }, 1);

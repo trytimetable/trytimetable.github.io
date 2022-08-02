@@ -8,6 +8,8 @@ html,body{
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
+
 }
 body{
     box-sizing: border-box;
@@ -81,6 +83,10 @@ ul{
         margin: 0;
         font-weight: 600;
         letter-spacing: -0.02em;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
     }
     .divider{  
         border-bottom: 1px solid #7BB9B0;
@@ -175,24 +181,21 @@ ul{
         line-height: 42px;
         text-align: center;
         color: #2D2D2D;
-        margin: 40px auto 2vw ;
+        margin: 40px auto 2vh ;
         max-width: 90vw;
     }
 
     .subtext-1{
-        padding-top: 20px;
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 200%;
+        font-size:Clamp(16px, 4vw, 24px);
+        line-height: 130%;        
         color: #2D2D2D;
-        margin: 0 auto 32px auto;
-        text-align: left;
-        .title{
-            font-weight: bold;
-            margin: 0;
-        }
+        margin: 0 auto 22px auto;
+        text-align: center;
+        max-width: 80vw;
+      
     }
     .cta-btn{
             padding: 13px 0 13px 0  ;
@@ -213,28 +216,42 @@ ul{
     }
     iframe{
         display: block;
-        margin: 0 auto 0 auto;
+        margin: 0 auto 20px ;
         width: 78vw;
         height: 45vw;
     }
 
     #heading-2{
         margin-top: 7vh;
+        font-size: 5.5vw;
 
     }
 
-    .txt-cont{
-        display: block;
-        margin: 0 auto;
-        max-width: 441px;
+    .head2-cont{
+        //margin: 0 auto;
         .para-txt{
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 14px;
+            font-size: Max(16px, 2.2vw);
             line-height: 200%;
-            max-width: 441px;
+            padding-left: 2vw;
+            padding-right: 100px;
+
         }
+        .list{
+            padding-left: 6vw;
+            max-width: 900px;
+            li{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: Max(16px, 2.2vw);
+                line-height: 200%;
+                margin-bottom:10px;
+            }
+        }
+        
     }
 
     .heading-2-img{
@@ -247,12 +264,14 @@ ul{
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
+       //for final font-size: 24px;
+        font-size: 22px;
         line-height: 28px;
         color: #2D2D2D;
         text-align: center;
         margin-top: 50px;
-        margin-bottom: 30px;
+        // for final margin-bottom: 30px;
+        margin-bottom: 18px;
 
         span{
             display: none;
@@ -261,6 +280,8 @@ ul{
 
     #mc_embed_signup{
       padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
         
         .mc-field-group{
             display: block;
@@ -416,41 +437,47 @@ ul{
     }
    
     .main{
+        padding-bottom: 50px;
         .heading{
-        font-size: Min(3vw,64px);
+        font-size: Min(4vw,64px);
         line-height: 75px;
-        margin-bottom: 1.2vh;
+        margin-bottom: 1.5vh;
         margin-top: .8vh;
         }
 
         .subtext-1{
-            font-size: Min(1.5vw,36px);
-            line-height: 44px;
-            margin-bottom: 2vh;
-            text-align: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: Clamp(24px,1.8vw,36px);
+        line-height: 2vh;
+        text-align: center;
+        margin-bottom: 5vh;
+        }
 
-            .title{
-                font-size: 2.5vw;
-                margin-bottom: 4vh;
-            }
-
-            .line-2{
-                font-size:  1.5vw;
-                margin:  0 0 1vh 0 ;
-            }
-
-            .line-3{
-                margin: 0 auto;
-                max-width: 25vw;
-                line-height: 3vh;
-            }
-
-            .end{
-                margin: 1vh 0 0 0 ;
-
-            }
+        iframe{
+            width: 58vw;
+            //max-width: 1152px;
+            height: 31.5vw;
+            min-width: 952px;
+            min-height: 545px;
+            //max-height: 648px;
+            margin: 0 auto 1.5vw;
 
         }
+
+        
+        .cta-txt{
+            line-height: 200%;
+            margin-top: 1.5vh;
+            margin-bottom: -10px;
+            font-size: clamp(1vw, 1.8vw, 36px);
+
+            span{
+             display: inline;
+            }
+        }
+
         .cta-btn{
             font-size: Min(1.4vw,28px);
             line-height: 200%;
@@ -459,20 +486,10 @@ ul{
             margin-bottom: 7vh;
         }
 
-        iframe{
-            width: 57vw;
-            //max-width: 1152px;
-            height: 30.5vw;
-            min-width: 952px;
-            min-height: 545px;
-            //max-height: 648px;
-            margin: 0 auto 1.5vw;
-
-        }
+   
 
         .head2-section{
-            // background-color: #EAEAEA;
-            // padding: 10vh 0;
+        
             justify-content: center;
             margin: 20vh auto 0;
             display: flex;
@@ -480,11 +497,17 @@ ul{
            
             .head2-cont{
                 //margin-left: 203px;
-                margin-left: Max(8.5vw, 10px);
+                margin-left: Max(5vw, 10px);
 
                 #heading-2{
                     margin: 0;
                     text-align: left;
+                    font-family: 'Work Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 64px;
+                    line-height: 75px;
+                    margin-left: 10px;
 
                 }
                 .txt-cont{
@@ -492,39 +515,43 @@ ul{
                     max-width: 661px;
 
                     .para-txt{
-                        max-width: 661px;
                         font-size: 24px;
+                        margin: 10px 0 0 10px ;
+                        padding: 0;
+                        
+
+                    }
+                    .list{
+                        padding: 0 0 0 3vw;
+
+                        li{
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 24px;
+                            line-height: 200%;
+                        }
                     }
                 }
             }
             .heading-2-img{
-                margin: 0;
-                //width: 458px;
-                width: 27.5vw;
-                //height: 404px;
-                height: 24.2vw;
+                margin: 20px 0 0 0;
+                width: 28.5vw;
+                height: 25.2vw;
             }
         }
 
-        .cta-txt{
-            line-height: 200%;
-            margin-top: 20vh;
-            font-size: clamp(1vw, 2vw, 64px);
-
-            span{
-             display: inline;
-            }
-        }
 
 
         #mc_embed_signup{
-      
             padding:0;
+            margin: 0 auto;
+            max-width: 55vw;
+
             .mc-field-group{
                 display: block;
                 margin: 2vh 0 0 0;
                 padding: 0;
-                max-width: 55vw;
                 #mce-EMAIL{
                     padding: 0;
                     height: 7.5vh;

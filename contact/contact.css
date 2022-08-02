@@ -14,7 +14,6 @@ body {
   box-sizing: border-box;
   padding: 0%;
   margin: 0;
-  overflow: hidden;
 }
 
 ul {
@@ -81,6 +80,10 @@ ul {
   margin: 0;
   font-weight: 600;
   letter-spacing: -0.02em;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
 }
 .navbar .divider {
   border-bottom: 1px solid #7BB9B0;
@@ -153,7 +156,7 @@ ul {
 }
 
 .main {
-  padding: 65px 24px 65px 24px;
+  padding: 25px 24px 20px 24px;
 }
 .main .title {
   box-sizing: border-box;
@@ -171,7 +174,7 @@ ul {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 200%;
+  line-height: 140%;
   text-align: center;
   color: #2D2D2D;
 }
@@ -179,8 +182,9 @@ ul {
   box-sizing: border-box;
   position: relative;
   padding: 24px 20px 40px 20px;
-  height: max(45vh, 70vw);
-  max-height: 62vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 88vw;
   display: block;
   margin: 46px auto 0;
@@ -205,9 +209,10 @@ ul {
   border: 1px solid #AEAEAE;
   border-radius: 4px;
   width: 100%;
-  height: 33px;
+  height: 4vh;
   margin: 8px 0 16px 0;
   padding-left: 7px;
+  min-height: 30px;
 }
 .main form #msg {
   box-sizing: border-box;
@@ -216,28 +221,81 @@ ul {
   padding: 5px 0 0 5px;
   margin: 8px 0 18px 0;
   width: 100%;
-  height: 34%;
+  height: 16vh;
 }
-.main form button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: block;
-  margin: 0 20px 40px 0;
+.main form .button-cont-before {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+.main form .button-cont-before button {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 100%;
   line-height: 200%;
   color: #FFFFFF;
   background-color: #ED1F1F;
   border: none;
-  padding: 6px 20px;
-  border-radius: 4px;
+  margin-top: 3vw;
+  border-radius: 12px;
   cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 6vh;
+  width: 25vw;
+  min-height: 50px;
+  min-width: 100px;
+  max-width: 130px;
+  align-items: center;
 }
-.main form button:active {
+.main form .button-cont-before button:active {
   background-color: #b11919;
+}
+.main form .button-cont-after {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.main form .button-cont-after button {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 100%;
+  line-height: 200%;
+  color: #FFFFFF;
+  background-color: #ED1F1F;
+  border: none;
+  margin-top: 3vw;
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 6vh;
+  width: 25vw;
+  min-height: 50px;
+  min-width: 100px;
+  max-width: 130px;
+  align-items: center;
+}
+.main form .button-cont-after button:active {
+  background-color: #b11919;
+}
+.main form #confirmation {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: 140%;
+  color: #2D2D2D;
+  max-width: 70vw;
+  margin: 4.5vw 0 0 2vw;
+  padding-right: 25px;
+  color: #5ca217;
 }
 
 @media only screen and (min-width: 840px) {
@@ -293,6 +351,7 @@ ul {
   }
   .main {
     padding-top: 10px;
+    box-sizing: border-box;
   }
   .main .title {
     margin: 0 auto;
@@ -304,19 +363,21 @@ ul {
     color: #2D2D2D;
   }
   .main .subtext {
-    margin: -20px auto 24px;
+    margin: 0px auto 24px;
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 200%;
+    font-size: 150%;
+    line-height: 1vh;
     color: #2D2D2D;
   }
   .main form {
     padding: 48px 110px 40px 48px;
     margin: 0 auto;
     width: 79vw;
-    height: 64vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     max-height: initial;
   }
   .main form label {
@@ -330,22 +391,22 @@ ul {
     margin: 6px 0 18px 0;
   }
   .main form #msg {
-    height: 23%;
+    height: 18vh;
   }
-  .main form button {
+  .main form .button-cont button {
     border-radius: 12px;
     font-weight: 700;
     font-size: 24px;
     line-height: 200%;
-    margin: 0 110px 20px 0;
-    padding: 12px 48px;
+    height: 7vh;
+    width: 16vw;
   }
 }
 @media only screen and (min-width: 1080px) {
   .navbar {
     padding-right: 129px;
     padding-left: 90px;
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 20px;
   }
   .navbar .logo {
@@ -385,6 +446,9 @@ ul {
     margin: 0 auto;
     width: 69vw;
     height: 64vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     max-height: initial;
   }
   .main form label {
@@ -400,16 +464,19 @@ ul {
     font-family: "Inter", sans-serif;
   }
   .main form #msg {
-    height: 23%;
+    height: 16vh;
     font-size: 18px;
     font-family: "Inter", sans-serif;
   }
-  .main form button {
+  .main form .button-cont button {
+    margin-top: 10px;
     border-radius: 12px;
     font-weight: 700;
     font-size: 24px;
     line-height: 200%;
-    margin: 0 110px 25px 0;
-    padding: 12px 48px;
+    max-width: 150px;
+  }
+  .main form .button-cont #confirmation {
+    margin-top: 20px;
   }
 }/*# sourceMappingURL=contact.css.map */

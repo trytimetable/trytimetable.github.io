@@ -8,6 +8,7 @@ html, body {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
 }
 
 body {
@@ -80,6 +81,10 @@ ul {
   margin: 0;
   font-weight: 600;
   letter-spacing: -0.02em;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
 }
 .navbar .divider {
   border-bottom: 1px solid #7BB9B0;
@@ -166,23 +171,19 @@ ul {
   line-height: 42px;
   text-align: center;
   color: #2D2D2D;
-  margin: 40px auto 2vw;
+  margin: 40px auto 2vh;
   max-width: 90vw;
 }
 .main .subtext-1 {
-  padding-top: 20px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 200%;
+  font-size: clamp(16px, 4vw, 24px);
+  line-height: 130%;
   color: #2D2D2D;
-  margin: 0 auto 32px auto;
-  text-align: left;
-}
-.main .subtext-1 .title {
-  font-weight: bold;
-  margin: 0;
+  margin: 0 auto 22px auto;
+  text-align: center;
+  max-width: 80vw;
 }
 .main .cta-btn {
   padding: 13px 0 13px 0;
@@ -203,25 +204,34 @@ ul {
 }
 .main iframe {
   display: block;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 20px;
   width: 78vw;
   height: 45vw;
 }
 .main #heading-2 {
   margin-top: 7vh;
+  font-size: 5.5vw;
 }
-.main .txt-cont {
-  display: block;
-  margin: 0 auto;
-  max-width: 441px;
-}
-.main .txt-cont .para-txt {
+.main .head2-cont .para-txt {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: max(16px, 2.2vw);
   line-height: 200%;
-  max-width: 441px;
+  padding-left: 2vw;
+  padding-right: 100px;
+}
+.main .head2-cont .list {
+  padding-left: 6vw;
+  max-width: 900px;
+}
+.main .head2-cont .list li {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: max(16px, 2.2vw);
+  line-height: 200%;
+  margin-bottom: 10px;
 }
 .main .heading-2-img {
   display: block;
@@ -232,18 +242,20 @@ ul {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 28px;
   color: #2D2D2D;
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 .main .cta-txt span {
   display: none;
 }
 .main #mc_embed_signup {
   padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .main #mc_embed_signup .mc-field-group {
   display: block;
@@ -355,33 +367,39 @@ ul {
   .navbar .nav-container {
     align-items: center;
   }
+  .main {
+    padding-bottom: 50px;
+  }
   .main .heading {
-    font-size: min(3vw, 64px);
+    font-size: min(4vw, 64px);
     line-height: 75px;
-    margin-bottom: 1.2vh;
+    margin-bottom: 1.5vh;
     margin-top: 0.8vh;
   }
   .main .subtext-1 {
-    font-size: min(1.5vw, 36px);
-    line-height: 44px;
-    margin-bottom: 2vh;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(24px, 1.8vw, 36px);
+    line-height: 2vh;
     text-align: center;
+    margin-bottom: 5vh;
   }
-  .main .subtext-1 .title {
-    font-size: 2.5vw;
-    margin-bottom: 4vh;
+  .main iframe {
+    width: 58vw;
+    height: 31.5vw;
+    min-width: 952px;
+    min-height: 545px;
+    margin: 0 auto 1.5vw;
   }
-  .main .subtext-1 .line-2 {
-    font-size: 1.5vw;
-    margin: 0 0 1vh 0;
+  .main .cta-txt {
+    line-height: 200%;
+    margin-top: 1.5vh;
+    margin-bottom: -10px;
+    font-size: clamp(1vw, 1.8vw, 36px);
   }
-  .main .subtext-1 .line-3 {
-    margin: 0 auto;
-    max-width: 25vw;
-    line-height: 3vh;
-  }
-  .main .subtext-1 .end {
-    margin: 1vh 0 0 0;
+  .main .cta-txt span {
+    display: inline;
   }
   .main .cta-btn {
     font-size: min(1.4vw, 28px);
@@ -390,13 +408,6 @@ ul {
     width: 16.5vw;
     margin-bottom: 7vh;
   }
-  .main iframe {
-    width: 57vw;
-    height: 30.5vw;
-    min-width: 952px;
-    min-height: 545px;
-    margin: 0 auto 1.5vw;
-  }
   .main .head2-section {
     justify-content: center;
     margin: 20vh auto 0;
@@ -404,41 +415,51 @@ ul {
     flex-direction: row-reverse;
   }
   .main .head2-section .head2-cont {
-    margin-left: max(8.5vw, 10px);
+    margin-left: max(5vw, 10px);
   }
   .main .head2-section .head2-cont #heading-2 {
     margin: 0;
     text-align: left;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    margin-left: 10px;
   }
   .main .head2-section .head2-cont .txt-cont {
     margin: 0;
     max-width: 661px;
   }
   .main .head2-section .head2-cont .txt-cont .para-txt {
-    max-width: 661px;
     font-size: 24px;
+    margin: 10px 0 0 10px;
+    padding: 0;
+  }
+  .main .head2-section .head2-cont .txt-cont .list {
+    padding: 0 0 0 3vw;
+  }
+  .main .head2-section .head2-cont .txt-cont .list li {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 200%;
   }
   .main .head2-section .heading-2-img {
-    margin: 0;
-    width: 27.5vw;
-    height: 24.2vw;
-  }
-  .main .cta-txt {
-    line-height: 200%;
-    margin-top: 20vh;
-    font-size: clamp(1vw, 2vw, 64px);
-  }
-  .main .cta-txt span {
-    display: inline;
+    margin: 20px 0 0 0;
+    width: 28.5vw;
+    height: 25.2vw;
   }
   .main #mc_embed_signup {
     padding: 0;
+    margin: 0 auto;
+    max-width: 55vw;
   }
   .main #mc_embed_signup .mc-field-group {
     display: block;
     margin: 2vh 0 0 0;
     padding: 0;
-    max-width: 55vw;
   }
   .main #mc_embed_signup .mc-field-group #mce-EMAIL {
     padding: 0;

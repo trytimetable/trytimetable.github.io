@@ -93,6 +93,10 @@ ul{
         margin: 0;
         font-weight: 600;
         letter-spacing: -0.02em;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
     }
     .divider{  
         border-bottom: 1px solid #7BB9B0;
@@ -267,7 +271,6 @@ ul{
                 margin-top: -.4px;
                 width: fit-content;
                 border-radius: 0em .5em .5em 0;
-                border: none;
                 font-family: 'Inter', sans-serif;
                 font-size: 14px;
                 appearance: none;
@@ -559,7 +562,14 @@ ul{
                         line-height: 29px;  
                         transition-duration: initial;    
                     }
+
+                    
                 }
+               
+            }
+            #mce-responses{
+                margin-top: 20px;
+                font-size: 20px;
             }
             
             form{
