@@ -489,6 +489,7 @@ ul {
   }
   .main .main-contacts img {
     width: 2.5vw;
+    display: inline-block;
   }
   .main .main-contacts .fb-icon, .main .main-contacts .mail-icon {
     padding-left: 13.18px;
